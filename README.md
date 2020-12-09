@@ -16,8 +16,8 @@ NewsExplorer - сервис поиска новостей.
 `npm run start` — запускает сервер   
 `npm run dev` — запускает сервер с hot-reload
 
-## Ссылки:   
+## Ссылки   
 
 Доменное имя сервера: api.articles.students.nomoredomains.monster;   
-Публичный IP-адрес: 130.193.51.207   
+Публичный IP-адрес: 178.154.228.190   
 [Ссылка на backend](https://api.articles.students.nomoredomains.monster)   
