@@ -18,6 +18,6 @@ NewsExplorer - сервис поиска новостей.
 
 ## Ссылки   
 
-Доменное имя сервера: api.articles.students.nomoredomains.monster;   
-Публичный IP-адрес: 178.154.228.190   
-[Ссылка на backend](https://api.articles.students.nomoredomains.monster)   
+Доменное имя сервера: api.diplom.students.nomoredomains.work;   
+Публичный IP-адрес: 178.154.230.174   
+[Ссылка на backend](https://api.diplom.students.nomoredomains.work)   
