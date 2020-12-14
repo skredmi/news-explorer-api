@@ -35,7 +35,7 @@ const deleteArticle = (req, res, next) => {
       } else if (card.owner.toString() !== req.user._id) {
         throw new ForbiddenError(FORBIDDEN_DELETE_ERROR);
       }
-      Article.findByIdAndRemove(req.params.id)
+      return Article.findByIdAndRemove(req.params.id)
         .then((cardData) => res.send({ data: cardData }));
     })
     .catch(next);
