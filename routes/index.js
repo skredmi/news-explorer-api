@@ -6,8 +6,8 @@ const errorRoutes = require('./error.js');
 const { login, createUser } = require('../controllers/users.js');
 const { validateLogin, validateRegister } = require('../utils/validaton');
 
-router.post('/', validateLogin, login);
-router.post('/', validateRegister, createUser);
+router.post('/signin', validateLogin, login);
+router.post('/signup', validateRegister, createUser);
 router.use(auth);
 router.use('/', userRoutes);
 router.use('/', articleRoutes);
