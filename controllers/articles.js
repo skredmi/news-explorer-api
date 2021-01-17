@@ -5,7 +5,7 @@ const ForbiddenError = require('../errors/forbidden-err');
 const { INVALID_DATA_ERROR, FORBIDDEN_DELETE_ERROR, CARD_NOT_FOUND_ERROR } = require('../utils/errors');
 
 const getArticles = (req, res, next) => {
-  Article.find({})
+  Article.find({}).select('+owner')
     .then((data) => res.send(data))
     .catch(next);
 };
