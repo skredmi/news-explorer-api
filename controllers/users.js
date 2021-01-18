@@ -10,12 +10,13 @@ const { DEV_KEY } = require('../utils/secret-key');
 const { USER_NOT_FOUND_ERROR, EMAIL_EXIST_ERROR, WRONG_DATA_ERROR } = require('../utils/errors');
 
 const getUserInfo = (req, res, next) => {
-  User.findById(req.user._id).select('+owner')
+  User.findById(req.user._id)
+    .populate('owner')
     .then((user) => {
       if (!user) {
         throw new NotFoundError(USER_NOT_FOUND_ERROR);
       }
-      res.send(user);
+      res.send({ data: { email: user.email, name: user.name } });
     })
     .catch(next);
 };
