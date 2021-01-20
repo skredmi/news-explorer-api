@@ -11,7 +11,6 @@ const { USER_NOT_FOUND_ERROR, EMAIL_EXIST_ERROR, WRONG_DATA_ERROR } = require('.
 
 const getUserInfo = (req, res, next) => {
   User.findById(req.user._id)
-    .select('+owner')
     .then((user) => {
       if (!user) {
         throw new NotFoundError(USER_NOT_FOUND_ERROR);
